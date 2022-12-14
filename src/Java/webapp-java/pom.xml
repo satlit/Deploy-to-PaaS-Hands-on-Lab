@@ -58,6 +58,27 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<version>2.7.0</version>
+				<configuration>
+				<subscriptionId>7ef8d6ae-ae3c-40d9-b09c-2a45039c75bc</subscriptionId>
+				<resourceGroup>user02-spoke</resourceGroup>
+				<appName>20221214-testapp</appName>
+				<deployment>
+				<resources>
+					<resource>
+					<type>jar</type>
+					<directory>${project.basedir}/target</directory>
+					<includes>
+					<include>*.jar</include>
+					</includes>
+					</resource>
+				</resources>
+				</deployment>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
